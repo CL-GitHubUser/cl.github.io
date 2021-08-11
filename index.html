@@ -146,63 +146,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cl-githubuser.github.io/2021/07/24/lalala/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/cl.github.io/images/avatar.gif">
-      <meta itemprop="name" content="CL">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小菜鸟也想当大佬">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/cl.github.io/2021/07/24/lalala/" class="post-title-link" itemprop="url">lalala</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-24 00:57:36" itemprop="dateCreated datePublished" datetime="2021-07-24T00:57:36+08:00">2021-07-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://cl-githubuser.github.io/2021/07/22/Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -234,7 +177,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-11 20:41:44" itemprop="dateModified" datetime="2021-08-11T20:41:44+08:00">2021-08-11</time>
+                <time title="修改时间：2021-08-11 22:46:55" itemprop="dateModified" datetime="2021-08-11T22:46:55+08:00">2021-08-11</time>
               </span>
 
           
@@ -248,7 +191,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="1-B树为什么可以减少IO次数"><a href="#1-B树为什么可以减少IO次数" class="headerlink" title="1. B树为什么可以减少IO次数"></a>1. B树为什么可以减少IO次数</h3><p>磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。</p>
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 八股文</span><br><span class="line">date: 2021-07-24 00:57:36</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="1-B树为什么可以减少IO次数"><a href="#1-B树为什么可以减少IO次数" class="headerlink" title="1. B树为什么可以减少IO次数"></a>1. B树为什么可以减少IO次数</h3><p>磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。</p>
 <p>B+树非叶子结点保存的是叶子结点数据的指针，不是真实的数据，所以中间结点的存储占用的空间较少，能存更多的数据，更加矮胖，效率更高。</p>
 <h3 id="2-innodb四大特性"><a href="#2-innodb四大特性" class="headerlink" title="2. innodb四大特性"></a>2. innodb四大特性</h3><h4 id="2-1-插入缓冲（Insert-buffer）"><a href="#2-1-插入缓冲（Insert-buffer）" class="headerlink" title="2.1 插入缓冲（Insert buffer）"></a>2.1 插入缓冲（Insert buffer）</h4><p>对于非聚集索引和非唯一索引有效，插入数据时下判断插入的非聚集索引页是否在缓存池中，如果在就直接插入；如果不在，先放入insert buffer ，按照一定频率进行合并操作，这样就可以将多个插入合并到一个操作，减少随机IO带来的性能损耗。</p>
 <h4 id="2-2-二次写（double-write"><a href="#2-2-二次写（double-write" class="headerlink" title="2.2 二次写（double write)"></a>2.2 二次写（double write)</h4><p>flush操作：将内存中的 数据更新到磁盘中并将redo log的checkpoint前推，保持磁盘和内存的数据一致性。</p>
@@ -1113,7 +1062,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/cl.github.io/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
