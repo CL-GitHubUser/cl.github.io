@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"cl-githubuser.github.io","root":"/cl.github.io/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="123title: 八股文date: 2021-07-24 00:57:36tags:      数据库1. B树为什么可以减少IO次数磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。 B+树非叶子结点保存的是叶">
+  <meta name="description" content="数据库1. B树为什么可以减少IO次数磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。 B+树非叶子结点保存的是叶子结点数据的指针，不是真实的数据，所以中间结点的存储占用的空间较少，能存更多的数据，更加矮胖，效率">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小菜鸟也想当大佬">
-<meta property="og:url" content="https://cl-githubuser.github.io/2021/07/22/Note/index.html">
+<meta property="og:title" content="八股文">
+<meta property="og:url" content="https://cl-githubuser.github.io/2021/08/11/%E5%85%AB%E8%82%A1%E6%96%87/index.html">
 <meta property="og:site_name" content="小菜鸟也想当大佬">
-<meta property="og:description" content="123title: 八股文date: 2021-07-24 00:57:36tags:      数据库1. B树为什么可以减少IO次数磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。 B+树非叶子结点保存的是叶">
+<meta property="og:description" content="数据库1. B树为什么可以减少IO次数磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。 B+树非叶子结点保存的是叶子结点数据的指针，不是真实的数据，所以中间结点的存储占用的空间较少，能存更多的数据，更加矮胖，效率">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:/Users/80466/Desktop/秋招/Note/数据库死锁.png">
-<meta property="article:published_time" content="2021-07-22T02:14:16.451Z">
-<meta property="article:modified_time" content="2021-08-11T14:46:55.781Z">
+<meta property="article:published_time" content="2021-08-11T14:50:15.000Z">
+<meta property="article:modified_time" content="2021-08-11T14:51:04.381Z">
 <meta property="article:author" content="CL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/80466/Desktop/秋招/Note/数据库死锁.png">
 
-<link rel="canonical" href="https://cl-githubuser.github.io/2021/07/22/Note/">
+<link rel="canonical" href="https://cl-githubuser.github.io/2021/08/11/%E5%85%AB%E8%82%A1%E6%96%87/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title> | 小菜鸟也想当大佬</title>
+  <title>八股文 | 小菜鸟也想当大佬</title>
   
 
 
@@ -153,7 +153,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cl-githubuser.github.io/2021/07/22/Note/">
+    <link itemprop="mainEntityOfPage" href="https://cl-githubuser.github.io/2021/08/11/%E5%85%AB%E8%82%A1%E6%96%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/cl.github.io/images/avatar.gif">
@@ -166,7 +166,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          八股文
         </h1>
 
         <div class="post-meta">
@@ -175,16 +175,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-07-22 10:14:16" itemprop="dateCreated datePublished" datetime="2021-07-22T10:14:16+08:00">2021-07-22</time>
+              <time title="创建时间：2021-08-11 22:50:15 / 修改时间：22:51:04" itemprop="dateCreated datePublished" datetime="2021-08-11T22:50:15+08:00">2021-08-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-11 22:46:55" itemprop="dateModified" datetime="2021-08-11T22:46:55+08:00">2021-08-11</time>
-              </span>
 
           
 
@@ -197,13 +191,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 八股文</span><br><span class="line">date: 2021-07-24 00:57:36</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="1-B树为什么可以减少IO次数"><a href="#1-B树为什么可以减少IO次数" class="headerlink" title="1. B树为什么可以减少IO次数"></a>1. B树为什么可以减少IO次数</h3><p>磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。</p>
+        <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="1-B树为什么可以减少IO次数"><a href="#1-B树为什么可以减少IO次数" class="headerlink" title="1. B树为什么可以减少IO次数"></a>1. B树为什么可以减少IO次数</h3><p>磁盘IO：寻道时间，旋转延迟，传输时间；每次读取加载需要地址的数据到内存，而且相邻地址的数据也加载到内存缓冲区，相当于一页，一页树相当于一次IO。数据库索引存在磁盘上，利用索引查询时，只能逐页加载每个磁盘页，这个磁盘页对应索引树的节点。</p>
 <p>B+树非叶子结点保存的是叶子结点数据的指针，不是真实的数据，所以中间结点的存储占用的空间较少，能存更多的数据，更加矮胖，效率更高。</p>
 <h3 id="2-innodb四大特性"><a href="#2-innodb四大特性" class="headerlink" title="2. innodb四大特性"></a>2. innodb四大特性</h3><h4 id="2-1-插入缓冲（Insert-buffer）"><a href="#2-1-插入缓冲（Insert-buffer）" class="headerlink" title="2.1 插入缓冲（Insert buffer）"></a>2.1 插入缓冲（Insert buffer）</h4><p>对于非聚集索引和非唯一索引有效，插入数据时下判断插入的非聚集索引页是否在缓存池中，如果在就直接插入；如果不在，先放入insert buffer ，按照一定频率进行合并操作，这样就可以将多个插入合并到一个操作，减少随机IO带来的性能损耗。</p>
 <h4 id="2-2-二次写（double-write"><a href="#2-2-二次写（double-write" class="headerlink" title="2.2 二次写（double write)"></a>2.2 二次写（double write)</h4><p>flush操作：将内存中的 数据更新到磁盘中并将redo log的checkpoint前推，保持磁盘和内存的数据一致性。</p>
@@ -559,16 +547,14 @@
 </li>
 <li><p>kill-9：直接杀死进程，exit(0);</p>
 <p>它没有给进程留下善后的机会：</p>
-<ol>
-<li><p>关闭socket链接</p>
-</li>
-<li><p>清理临时文件</p>
-</li>
-<li><p>将自己将要被销毁的消息通知给子进程</p>
-</li>
-<li><p>重置自己的终止状态</p>
-</li>
-</ol>
+<pre><code>1) 关闭socket链接
+
+2) 清理临时文件
+
+3) 将自己将要被销毁的消息通知给子进程
+
+4) 重置自己的终止状态
+</code></pre>
 </li>
 </ol>
 <h3 id="1-24-孤儿进程"><a href="#1-24-孤儿进程" class="headerlink" title="1.24 孤儿进程"></a>1.24 孤儿进程</h3><p>父进程先于子进程结束，孤儿进程将被init进程(进程号为1)所收养，并由init进程对它们完成状态收集工作。</p>
@@ -725,8 +711,7 @@
 </li>
 <li><p>   服务端给客户端返回SSL协议版本号、加密算法种类、随机数等信息，同时也返回服务器端的证书，即公钥证书</p>
 </li>
-<li><pre><code>客户端使用服务端返回的信息验证服务器的合法性，包括：
-</code></pre>
+<li><p>   客户端使用服务端返回的信息验证服务器的合法性，包括：</p>
 </li>
 </ol>
 <p>o 证书是否过期</p>
@@ -739,7 +724,7 @@
 <li>   服务器端在客户端提供的加密方案中选择加密程度最高的加密方式。</li>
 <li>   服务器将选择好的加密方案通过明文方式返回给客户端</li>
 <li>   客户端接收到服务端返回的加密方式后，使用该加密方式生成产生随机码（master_secret = PRF(pre_master_secret, “master secret”, ClientHello.random + ServerHello.random)），用作通信过程中对称加密的密钥，使用服务端返回的公钥进行加密，将加密后的随机码发送至服务器。</li>
-<li>   服务器收到客户端返回的加密信息后，使用自己的私钥进行解密，获取对称加密密钥。<br>在接下来的会话中，服务器和客户端将会使用该密码进行对称加密，保证通信过程中信息的安全。</li>
+<li>服务器收到客户端返回的加密信息后，使用自己的私钥进行解密，获取对称加密密钥。<br>   在接下来的会话中，服务器和客户端将会使用该密码进行对称加密，保证通信过程中信息的安全。</li>
 </ol>
 <p><strong>双向认证：</strong></p>
 <ol>
@@ -747,8 +732,7 @@
 </li>
 <li><p>   服务端给客户端返回SSL协议版本号、加密算法种类、随机数等信息，同时也返回服务器端的证书，即公钥证书</p>
 </li>
-<li><pre><code>客户端使用服务端返回的信息验证服务器的合法性，包括：
-</code></pre>
+<li><p>   客户端使用服务端返回的信息验证服务器的合法性，包括：</p>
 </li>
 </ol>
 <p>o 证书是否过期</p>
@@ -769,7 +753,7 @@
 </li>
 <li><p>   客户端收到服务端返回的加密方案密文后，使用自己的私钥进行解密，获取具体加密方式，而后，产生该加密方式的随机码，用作加密过程中的密钥，使用之前从服务端证书中获取到的公钥进行加密后，发送给服务端</p>
 </li>
-<li><p> 服务端收到客户端发送的消息后，使用自己的私钥进行解密，获取对称加密的密钥，在接下来的会话中，服务器和客户端将会使用该密码进行对称加密，保证通信过程中信息的安全。</p>
+<li><p>   服务端收到客户端发送的消息后，使用自己的私钥进行解密，获取对称加密的密钥，在接下来的会话中，服务器和客户端将会使用该密码进行对称加密，保证通信过程中信息的安全。</p>
 </li>
 </ol>
 <h4 id="5-http的报头"><a href="#5-http的报头" class="headerlink" title="5.http的报头"></a>5.http的报头</h4><p>请求报文：请求的方法，URL,协议版本</p>
@@ -898,8 +882,8 @@
 </ul>
 <h3 id="3-redis与memcached区别"><a href="#3-redis与memcached区别" class="headerlink" title="3.redis与memcached区别"></a>3.redis与memcached区别</h3><ol>
 <li>Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，hash等数据结构的存储。</li>
-<li> Redis支持数据的备份，即master-slave模式的数据备份。</li>
-<li> Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。</li>
+<li>Redis支持数据的备份，即master-slave模式的数据备份。</li>
+<li>Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。</li>
 <li>redis 单核，mamecahce支持多核,100K 以上数据后者更快</li>
 </ol>
 <h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><h4 id="1-二叉树DFS"><a href="#1-二叉树DFS" class="headerlink" title="1.二叉树DFS"></a>1.二叉树DFS</h4><ol>
@@ -932,13 +916,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cl.github.io/2021/07/21/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/cl.github.io/2021/07/22/Note/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cl.github.io/2021/08/11/%E5%85%AB%E8%82%A1%E6%96%87/" rel="next" title="八股文">
-      八股文 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
